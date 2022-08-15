@@ -39,6 +39,8 @@
   background-color: rgba(0,0,0,0.8);
 }
 
+
+
 /* Caption Info */
 .info {
   color: #e3e3e3;
@@ -48,4 +50,23 @@
   bottom: 10px;
   width: 100%;
   text-align: center;
+}
+
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #acc;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+.active {
+    background-color: red;
+}
+
+.enable, .dots:hover {
+    background-color: #717161;
 }
