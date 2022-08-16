@@ -4,7 +4,6 @@
   margin: auto;
   margin-top: 50px;
   margin-bottom: 25px;
-  /* border: 1px solid red; */
 }
 
 .charClass {
@@ -39,7 +38,7 @@ img {
   height: 200px;
 }
 
-#mageBtn, #warriorBtn, #rangerBtn {
+.btn {
   width: 150px;
   height: 30px;
   margin: 15px auto;
@@ -79,7 +78,6 @@ img {
 }
 
 .dots {
-  /* cursor: pointer; */
   height: 16px;
   width: 16px;
   margin: 0 3px;
@@ -89,10 +87,22 @@ img {
   transition: background-color 0.5s ease;
 }
 
-/* .dots:hover {
-  background-color: #717161;
-} */
-
 .active {
   background-color: #717161;
+}
+
+a:link { 
+  text-decoration: none; 
+}
+
+a:visited { 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: none; 
+}
+
+a:active { 
+  text-decoration: none; 
 }
