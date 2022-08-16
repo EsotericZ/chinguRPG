@@ -17,6 +17,8 @@
   border-radius: 25px;
   height: 500px;
   width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 h2 {
@@ -47,7 +49,6 @@ img {
 
 .info {
   margin-top: 25px;
-  /* color: #e3e3e3; */
   font-size: 16px;
   width: 100%;
   text-align: center;
