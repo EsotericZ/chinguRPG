@@ -10,25 +10,42 @@
     <body>
         <div class="carousel">
             <div class="charClass">
-                <img src="./assets/images/mage.png">
-                <div class="info">Mage</div>
+                <div class="card">
+                    <h2>Mage</h2>
+                    <img src="./assets/images/mage.png">
+                    <div class="info">Uses spells to inflict magical damage on enermies. Magical wards protect them from enemy attacks.</div>
+                    <ul>
+                        <li>Health: 80</li>
+                        <li>Attack: 15-20</li>
+                        <li>Attack Mod: 1.5</li>
+                        <li>Defense: 6-8</li>
+                        <li>Defense Mod: 1.75</li>
+                    </ul>
+                    <button id="mageBtn">Select</button>
+                </div>
             </div>
             <div class="charClass">
-                <img src="./assets/images/ranger.png">
-                <div class="info">Ranger</div>
+                <div class="card">
+                    <h2>Ranger</h2>
+                    <img src="./assets/images/ranger.png">
+                    <div class="info">Ranger</div>
+                </div>
             </div>
             <div class="charClass">
-                <img src="./assets/images/warrior.png">
-                <div class="info">Warrior</div>
+                <div class="card">
+                    <h2>Warrior</h2>
+                    <img src="./assets/images/warrior.png">
+                    <div class="info">Warrior</div>
+                </div>
             </div>
 
             <a class="back" onclick="nextCharacter(-1)">&#10094;</a>
             <a class="forward" onclick="nextCharacter(1)">&#10095;</a>
         </div>
         <div style="text-align:center">
-            <span class="dots" onclick="currentSlide(1)"></span>
-            <span class="dots" onclick="currentSlide(2)"></span>
-            <span class="dots" onclick="currentSlide(3)"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
         </div> 
         <script src="./assets/js/script.js"></script>    
     </body>
