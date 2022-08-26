@@ -22,3 +22,11 @@ let warrior = {
     defense: [8,9,10],
     defenseMod: 1.75,
 }
+
+let bat = {
+    health: 75,
+    attack: [13,14,15,16,17],
+    attackMod: 1.25,
+    defense: [6,7,8],
+    defenseMod: 1.75,
+}

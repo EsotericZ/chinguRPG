@@ -107,3 +107,11 @@ a:hover {
 a:active { 
   text-decoration: none; 
 }
+
+#enemy {
+  height: 50%;
+}
+
+#hero {
+  height: 50%;
+}

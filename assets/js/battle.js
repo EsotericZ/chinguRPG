@@ -16,4 +16,7 @@ if (character == "mage") {
     characterStats = warrior;
 }
 
+batStats = bat;
+
 console.log(characterStats);
+console.log(batStats);
