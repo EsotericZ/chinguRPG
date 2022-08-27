@@ -1,12 +1,7 @@
-// VARIABLES
-// let startBtn = document.getElementById("startBtn");
-let characterStats;
-
-let battle = document.getElementById("battle");
 let character = localStorage.getItem("character");
-console.log(character);
-// console.log(mage)
-battle.textContent = `test ${character}`;
+
+let characterStats;
+let heroHealth = document.getElementById("heroHealth");
 
 if (character == "mage") {
     characterStats = mage;
@@ -16,7 +11,10 @@ if (character == "mage") {
     characterStats = warrior;
 }
 
-batStats = bat;
+let batStats = bat;
 
 console.log(characterStats);
 console.log(batStats);
+
+heroClass.textContent = `${character}`;
+heroHealth.textContent = `Health: ${characterStats.health}`;
