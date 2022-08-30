@@ -12,9 +12,15 @@ if (character == "mage") {
 }
 
 let batStats = bat;
+let enemyPic = document.createElement("img");
+document.getElementById("enemyPic").appendChild(enemyPic);
+enemyPic.src = `./assets/images/bat.png`
 
-console.log(characterStats);
-console.log(batStats);
+enemyHealth.textContent = `Health: ${batStats.health}`;
 
-heroClass.textContent = `${character}`;
+let heroPic = document.createElement("img");
+document.getElementById("heroPic").appendChild(heroPic);
+heroPic.src = `./assets/images/${character}.png`
+
+// heroClass.textContent = `${character}`;
 heroHealth.textContent = `Health: ${characterStats.health}`;
