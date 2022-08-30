@@ -24,3 +24,24 @@ heroPic.src = `./assets/images/${character}.png`
 
 // heroClass.textContent = `${character}`;
 heroHealth.textContent = `Health: ${characterStats.health}`;
+
+let attack = document.getElementById('attackBtn');
+let mega = document.getElementById('megaBtn');
+let defense = document.getElementById('defenseBtn');
+
+attack.addEventListener('click', function() {
+    let hitIndex = Math.floor(Math.random() * characterStats.attack.length);
+    let hit = characterStats.attack[hitIndex];
+    let newBatHealth = batStats.health - hit;  
+    alert(`Attack! ${characterStats.attack}, ${hit}, die bat ${newBatHealth}`);
+    batStats.health = newBatHealth;
+    enemyHealth.textContent = `Health: ${batStats.health}`;
+})
+
+mega.addEventListener('click', function() {
+    alert('Mega Attack!')
+})
+
+defense.addEventListener('click', function() {
+    alert('Defend!')
+})
