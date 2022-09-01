@@ -40,6 +40,7 @@ attack.addEventListener('click', function() {
 
 mega.addEventListener('click', function() {
     alert('Mega Attack!')
+    console.log('Yea!')
 })
 
 defense.addEventListener('click', function() {
