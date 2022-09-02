@@ -28,12 +28,13 @@ heroHealth.textContent = `Health: ${characterStats.health}`;
 let attack = document.getElementById('attackBtn');
 let mega = document.getElementById('megaBtn');
 let defense = document.getElementById('defenseBtn');
+let statusText = document.getElementById('status');
 
 attack.addEventListener('click', function() {
     let hitIndex = Math.floor(Math.random() * characterStats.attack.length);
     let hit = characterStats.attack[hitIndex];
     let newBatHealth = batStats.health - hit;  
-    alert(`Attack! ${characterStats.attack}, ${hit}, die bat ${newBatHealth}`);
+    statusText.textContent = `${characterStats.char} attacks!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
 })
