@@ -158,3 +158,7 @@ a:active {
   border-radius: 40px;
   text-align: center;
 }
+
+.disabled {
+  pointer-events: none;
+}

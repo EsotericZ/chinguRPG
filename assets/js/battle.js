@@ -30,18 +30,34 @@ let mega = document.getElementById('megaBtn');
 let defense = document.getElementById('defenseBtn');
 let statusText = document.getElementById('status');
 
+// Set Buttons
+attack.innerHTML = `${characterStats.attackName}`;
+mega.innerHTML = `${characterStats.megaName}`;
+
+let hitIndex
+let hit
+let newBatHealth
+
 attack.addEventListener('click', function() {
-    let hitIndex = Math.floor(Math.random() * characterStats.attack.length);
-    let hit = characterStats.attack[hitIndex];
-    let newBatHealth = batStats.health - hit;  
-    statusText.textContent = `${characterStats.char} attacks!`
+    hitIndex = Math.floor(Math.random() * characterStats.attack.length);
+    hit = characterStats.attack[hitIndex];
+    newBatHealth = batStats.health - hit;  
+    statusText.textContent = `${characterStats.char} attacks with ${characterStats.attackName}!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
 })
 
 mega.addEventListener('click', function() {
-    alert('Mega Attack!')
-    mega.classList.add('hidden');
+    hitIndex = Math.floor(Math.random() * characterStats.attack.length);
+    hit = Math.ceil(characterStats.attack[hitIndex] * characterStats.attackMod);
+    alert(hit);
+    newBatHealth = batStats.health - hit;  
+    statusText.textContent = `${characterStats.char} attacks with ${characterStats.megaName}!`
+    batStats.health = newBatHealth;
+    enemyHealth.textContent = `Health: ${batStats.health}`;
+    mega.innerHTML = 'One Time Use!';
+    mega.classList.add(disabled);
+    
 })
 
 defense.addEventListener('click', function() {
