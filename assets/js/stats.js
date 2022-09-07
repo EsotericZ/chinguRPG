@@ -41,3 +41,6 @@ let bat = {
     megaName: 'Thrash',
     defense: [6,7,8],
 }
+
+// add things they say 
+// and a timer
