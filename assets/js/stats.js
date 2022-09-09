@@ -8,6 +8,11 @@ let mage = {
     megaName: 'Big Spell',
     defense: [4,5,6],
     defenseMod: 1.5,
+    captions: [
+        'Taste my magic!',
+        'Hurts. Donut?',
+        'Mage Rage!'
+    ],
 }
 
 let ranger = {
@@ -19,6 +24,11 @@ let ranger = {
     megaName: 'Big Spell',
     defense: [0,1,2,3],
     defenseMod: 1.25,
+    captions: [
+        'You have my bow',
+        'Ranger Danger!',
+        'Arrow Funk Ton!'
+    ]
 }
 
 let warrior = {
@@ -30,6 +40,11 @@ let warrior = {
     megaName: 'Big Spell',
     defense: [8,9,10],
     defenseMod: 1,
+    captions: [
+        'You have my sword',
+        'I got this sword from a stone!',
+        'The pen is NOT mightier!'
+    ],
 }
 
 let bat = {
@@ -40,6 +55,11 @@ let bat = {
     attackMod: 1.25,
     megaName: 'Thrash',
     defense: [6,7,8],
+    captions: [
+        'My bite IS my bark!',
+        'The night time is the right time',
+        ':: indecernable bat noises ::'
+    ],
 }
 
 // add things they say 
