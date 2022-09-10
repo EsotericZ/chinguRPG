@@ -62,7 +62,6 @@ let bat = {
     ],
 }
 
-// add things they say 
 // and a timer
 // bat needs defense 
 
