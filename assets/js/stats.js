@@ -70,3 +70,4 @@ let bat = {
 // he hits  
 // repeat
 // until health == 0
+// finish this soon
