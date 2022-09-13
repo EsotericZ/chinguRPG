@@ -40,8 +40,11 @@ let newBatHealth
 
 attack.addEventListener('click', function() {
     hitIndex = Math.floor(Math.random() * characterStats.attack.length);
-    hit = characterStats.attack[hitIndex];
-    newBatHealth = batStats.health - hit;  
+    heroHit = Math.ceil(characterStats.attack[hitIndex]);
+    defIndex = Math.floor(Math.random() * batStats.defense.length)
+    batDef = Math.ceil(batStats.defense[defIndex]);
+    alert(`Hero ${heroHit} || Bat ${batDef}`)
+    newBatHealth = batStats.health - heroHit + batDef;  
     statusText.textContent = `${characterStats.char} attacks with ${characterStats.attackName}!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
@@ -49,9 +52,11 @@ attack.addEventListener('click', function() {
 
 mega.addEventListener('click', function() {
     hitIndex = Math.floor(Math.random() * characterStats.attack.length);
-    hit = Math.ceil(characterStats.attack[hitIndex] * characterStats.attackMod);
-    alert(hit);
-    newBatHealth = batStats.health - hit;  
+    heroHit = Math.ceil(characterStats.attack[hitIndex] * characterStats.attackMod);
+    defIndex = Math.floor(Math.random() * batStats.defense.length)
+    batDef = Math.ceil(batStats.defense[hitIndex]);
+    alert(`Hero ${heroHit} || Bat ${batDef}`)
+    newBatHealth = batStats.health - heroHit + batDef;  
     statusText.textContent = `${characterStats.char} attacks with ${characterStats.megaName}!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
