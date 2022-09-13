@@ -37,17 +37,33 @@ mega.innerHTML = `${characterStats.megaName}`;
 let hitIndex
 let hit
 let newBatHealth
+let newHeroHealth
+
+let batAttack = () => { 
+    hitIndex = Math.floor(Math.random() * batStats.attack.length);
+    batHit = Math.ceil(batStats.attack[hitIndex]);
+    defIndex = Math.floor(Math.random() * characterStats.defense.length)
+    heroDef = Math.ceil(characterStats.defense[defIndex]);
+    newHeroHealth = characterStats.health - batHit + heroDef;  
+    statusText.textContent = `${batStats.char} attacks with ${batStats.attackName}!`
+    characterStats.health = newHeroHealth;
+    heroHealth.textContent = `Health: ${characterStats.health}`;
+}
 
 attack.addEventListener('click', function() {
     hitIndex = Math.floor(Math.random() * characterStats.attack.length);
     heroHit = Math.ceil(characterStats.attack[hitIndex]);
     defIndex = Math.floor(Math.random() * batStats.defense.length)
     batDef = Math.ceil(batStats.defense[defIndex]);
-    alert(`Hero ${heroHit} || Bat ${batDef}`)
     newBatHealth = batStats.health - heroHit + batDef;  
     statusText.textContent = `${characterStats.char} attacks with ${characterStats.attackName}!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
+    attack.disabled = true;
+    statusText.textContent = 'Bats Turn!'
+    setTimeout(function() {
+        batAttack();
+    }, 2000)
 })
 
 mega.addEventListener('click', function() {
@@ -55,13 +71,12 @@ mega.addEventListener('click', function() {
     heroHit = Math.ceil(characterStats.attack[hitIndex] * characterStats.attackMod);
     defIndex = Math.floor(Math.random() * batStats.defense.length)
     batDef = Math.ceil(batStats.defense[hitIndex]);
-    alert(`Hero ${heroHit} || Bat ${batDef}`)
     newBatHealth = batStats.health - heroHit + batDef;  
     statusText.textContent = `${characterStats.char} attacks with ${characterStats.megaName}!`
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
     mega.innerHTML = 'One Time Use!';
-    mega.classList.add(disabled);
+    mega.disabled = true;
     
 })
 
