@@ -77,6 +77,10 @@ mega.addEventListener('click', function() {
     enemyHealth.textContent = `Health: ${batStats.health}`;
     mega.innerHTML = 'One Time Use!';
     mega.disabled = true;
+    statusText.textContent = 'Bats Turn!'
+    setTimeout(function() {
+        batAttack();
+    }, 2000)
     
 })
 
