@@ -28,6 +28,8 @@ heroHealth.textContent = `Health: ${characterStats.health}`;
 let attack = document.getElementById('attackBtn');
 let mega = document.getElementById('megaBtn');
 let defense = document.getElementById('defenseBtn');
+let heroText = document.getElementById('heroText');
+let enemyText = document.getElementById('enemyText');
 let statusText = document.getElementById('status');
 
 // Set Buttons
@@ -42,6 +44,9 @@ let newHeroHealth
 let batAttack = () => { 
     hitIndex = Math.floor(Math.random() * batStats.attack.length);
     batHit = Math.ceil(batStats.attack[hitIndex]);
+    captionIndex = Math.floor(Math.random() * batStats.captions.length);
+    enemyCaption = batStats.captions[captionIndex];
+    enemyText.textContent = enemyCaption;
     defIndex = Math.floor(Math.random() * characterStats.defense.length)
     heroDef = Math.ceil(characterStats.defense[defIndex]);
     newHeroHealth = characterStats.health - batHit + heroDef;  
@@ -53,6 +58,9 @@ let batAttack = () => {
 attack.addEventListener('click', function() {
     hitIndex = Math.floor(Math.random() * characterStats.attack.length);
     heroHit = Math.ceil(characterStats.attack[hitIndex]);
+    captionIndex = Math.floor(Math.random() * characterStats.captions.length);
+    heroCaption = characterStats.captions[captionIndex];
+    heroText.textContent = heroCaption;
     defIndex = Math.floor(Math.random() * batStats.defense.length)
     batDef = Math.ceil(batStats.defense[defIndex]);
     newBatHealth = batStats.health - heroHit + batDef;  
@@ -60,10 +68,16 @@ attack.addEventListener('click', function() {
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
     attack.disabled = true;
-    statusText.textContent = 'Bats Turn!'
+    statusText.textContent = 'Bats Turn!';
     setTimeout(function() {
         batAttack();
-    }, 2000)
+        heroText.textContent = '';
+        setTimeout(function() {
+            statusText.textContent = `${characterStats.char} Turn!`;
+            attack.disabled = false;
+            enemyText.textContent = '';
+        }, 4000);
+    }, 4000);
 })
 
 mega.addEventListener('click', function() {
