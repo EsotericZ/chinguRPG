@@ -68,6 +68,9 @@ attack.addEventListener('click', function() {
     batStats.health = newBatHealth;
     enemyHealth.textContent = `Health: ${batStats.health}`;
     attack.disabled = true;
+    if (batStats.health <= 0) {
+        endGameWin();
+    }
     statusText.textContent = 'Bats Turn!';
     setTimeout(function() {
         batAttack();
@@ -76,8 +79,8 @@ attack.addEventListener('click', function() {
             statusText.textContent = `${characterStats.char} Turn!`;
             attack.disabled = false;
             enemyText.textContent = '';
-        }, 4000);
-    }, 4000);
+        }, 3000);
+    }, 3000);
 })
 
 mega.addEventListener('click', function() {
@@ -91,13 +94,26 @@ mega.addEventListener('click', function() {
     enemyHealth.textContent = `Health: ${batStats.health}`;
     mega.innerHTML = 'One Time Use!';
     mega.disabled = true;
+    attack.disabled = true;
+    if (batStats.health <= 0) {
+        endGameWin();
+    }
     statusText.textContent = 'Bats Turn!'
     setTimeout(function() {
+        heroText.textContent = '';
         batAttack();
+        setTimeout(function() {
+            statusText.textContent = `${characterStats.char} Turn!`;
+            attack.disabled = false;
+            enemyText.textContent = '';
+        }, 3000);
     }, 2000)
-    
 })
 
 defense.addEventListener('click', function() {
     alert('Defend!')
 })
+
+let endGameWin = () => {
+    alert('Winner!');
+}
