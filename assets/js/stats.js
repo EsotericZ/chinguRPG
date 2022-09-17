@@ -63,9 +63,5 @@ let bat = {
 }
 
 
-// you hit 
-//timer 
-// he hits  
-// repeat
 // until health == 0
 // finish this soon
