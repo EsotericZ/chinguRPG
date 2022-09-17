@@ -27,7 +27,7 @@ heroHealth.textContent = `Health: ${characterStats.health}`;
 
 let attack = document.getElementById('attackBtn');
 let mega = document.getElementById('megaBtn');
-let defense = document.getElementById('defenseBtn');
+// let defense = document.getElementById('defenseBtn');
 let heroText = document.getElementById('heroText');
 let enemyText = document.getElementById('enemyText');
 let statusText = document.getElementById('status');
