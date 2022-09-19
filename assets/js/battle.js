@@ -53,6 +53,9 @@ let batAttack = () => {
     statusText.textContent = `${batStats.char} attacks with ${batStats.attackName}!`
     characterStats.health = newHeroHealth;
     heroHealth.textContent = `Health: ${characterStats.health}`;
+    if (characterStats.health <= 0) {
+        endGameLoss();
+    }
 }
 
 attack.addEventListener('click', function() {
@@ -110,10 +113,18 @@ mega.addEventListener('click', function() {
     }, 2000)
 })
 
-defense.addEventListener('click', function() {
-    alert('Defend!')
-})
+// defense.addEventListener('click', function() {
+//     alert('Defend!')
+// })
+
+let result;
 
 let endGameWin = () => {
     alert('Winner!');
+    result = 'win';
+}
+
+let endGameLoss = () => {
+    alert('Loser!');
+    result = 'loss';
 }

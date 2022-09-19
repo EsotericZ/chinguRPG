@@ -1,7 +1,7 @@
 // CHARACTER PROPERTIES
 let mage = {
     char: 'Mage',
-    health: 80,
+    health: 8,
     attack: [15,16,17,18,19,20],
     attackName: 'Spell',
     attackMod: 1.5,
