@@ -46,7 +46,6 @@ let batAttack = () => {
     batHit = Math.ceil(batStats.attack[hitIndex]);
     captionIndex = Math.floor(Math.random() * batStats.captions.length);
     enemyCaption = batStats.captions[captionIndex];
-    enemyText.textContent = enemyCaption;
     defIndex = Math.floor(Math.random() * characterStats.defense.length)
     heroDef = Math.ceil(characterStats.defense[defIndex]);
     newHeroHealth = characterStats.health - batHit + heroDef;  
@@ -113,18 +112,17 @@ mega.addEventListener('click', function() {
     }, 2000)
 })
 
-// defense.addEventListener('click', function() {
-//     alert('Defend!')
-// })
-
 let result;
 
+
 let endGameWin = () => {
-    alert('Winner!');
-    result = 'win';
+    result = 'Winner';
+    localStorage.setItem('result', result);
+    window.location.href = "results.html";
 }
 
 let endGameLoss = () => {
-    alert('Loser!');
-    result = 'loss';
+    result = 'Loser';
+    localStorage.setItem('result', result);
+    window.location.href = "results.html";
 }

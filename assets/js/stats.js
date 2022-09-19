@@ -61,7 +61,3 @@ let bat = {
         ':: indecernable bat noises ::'
     ],
 }
-
-
-// until health == 0
-// finish this soon
