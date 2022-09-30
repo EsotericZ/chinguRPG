@@ -24,7 +24,7 @@ None
 None
 
 ## Tests
-N/A
+None
 
 ## Questions
 GitHub Profile: [EsotericZ](https://www.github.com/EsotericZ)  
