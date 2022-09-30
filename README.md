@@ -1,12 +1,31 @@
-# chinguRPG
+# Chingu RPG
 
-Solo project
-Tier 2
-Made with HTML, CSS and JavaScript
+## Description 
+A custom made RPG game as a solo project for Chingu. Made using only HTML, CSS and JavaScript
 
-work on
-finish readme
-css for homepage
-css for results page
-restart button
+## Table of Contents
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
 
+## Installation
+None
+      
+## Usage
+Gaming. Testing skills.
+      
+## License
+None   
+      
+## Contributing 
+None
+
+## Tests
+N/A
+
+## Questions
+GitHub Profile: [EsotericZ](https://www.github.com/EsotericZ)  
+Additional questions? [Contact Me](mailto:cjsand03@gmail.com)
