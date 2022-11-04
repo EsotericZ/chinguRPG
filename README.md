@@ -1,5 +1,6 @@
 # Chingu RPG
 This is currently on hold
+Meed to determine the new due date
 
 ## Description 
 A custom made RPG game as a solo project for Chingu. Made using only HTML, CSS and JavaScript
