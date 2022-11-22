@@ -1,5 +1,6 @@
 # Chingu RPG
-This is currently on hold
+No longer on hold
+Finish before Christmas
 NEW DUE DATE - JAN 2
 Ducks are temporarily disabled
 
